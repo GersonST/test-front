@@ -22,7 +22,9 @@ function Payment() {
         <h2>DESCONTO</h2>
         <h2>TOTAL</h2>
       </div>
-      <button>FINALIZAR O PEDIDO</button>
+      <button>
+        <a href="/confirmation">FINALIZAR O PEDIDO</a>
+      </button>
     </div>
   )
 }

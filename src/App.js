@@ -1,16 +1,15 @@
 import React from 'react'
 import './App.css'
-import Cart from './pages/Cart'
 import Header from './components/Header'
-import Payment from './pages/Payment'
-import Confirmation from './pages/Confirmation'
+import { BrowserRouter } from 'react-router-dom'
+import Rotas from './services/routes'
 
 const App = () => (
   <div className="App">
     <Header />
-    <Cart />
-    <Payment />
-    <Confirmation />
+    <BrowserRouter>
+      <Rotas />
+    </BrowserRouter>
   </div>
 )
 

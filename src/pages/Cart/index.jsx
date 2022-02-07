@@ -17,7 +17,9 @@ function Cart() {
         <h2>Desconto</h2>
         <h2>Total</h2>
       </div>
-      <button>Seguir para o Pagamento</button>
+      <button>
+        <a href="/payment">Seguir para o Pagamento</a>
+      </button>
     </div>
   )
 }

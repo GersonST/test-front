@@ -3,9 +3,9 @@ import React from 'react'
 function Header() {
   return (
     <div>
-      <h1>SACOLA</h1>
-      <h1>PAGAMENTO</h1>
-      <h1>CONFIRMAÇÃO</h1>
+      <a href="/">SACOLA </a>
+      <a href="/payment"> PAGAMENTO </a>
+      <a href="/confirmation"> CONFIRMAÇÃO</a>
     </div>
   )
 }
