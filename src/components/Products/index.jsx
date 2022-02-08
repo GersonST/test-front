@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import * as Styled from './styles'
 import axios from 'axios'
+import { Breakpoint } from 'react-socks'
 
 function Products() {
   const [product, setProduct] = useState([])
@@ -16,18 +17,50 @@ function Products() {
   }, [])
 
   return (
-    <Styled.ContainerProduto>
-      {product.map((prod) => {
-        return (
-          <Styled.Produto key={prod.product.sku}>
-            <img src={prod.product.imageObjects[0].thumbnail} />
-            <span>{prod.product.name}</span>
+    <>
+      <Breakpoint large up>
+        <Styled.ContainerProduto>
+          {product.map((prod) => {
+            return (
+              <Styled.ProdutoLarge key={prod.product.sku}>
+                <img src={prod.product.imageObjects[0].thumbnail} />
+                <span>{prod.product.name}</span>
 
-            <h3>R$ {prod.product.priceSpecification.originalPrice}</h3>
-          </Styled.Produto>
-        )
-      })}
-    </Styled.ContainerProduto>
+                <h3>R$ {prod.product.priceSpecification.originalPrice}</h3>
+              </Styled.ProdutoLarge>
+            )
+          })}
+        </Styled.ContainerProduto>
+      </Breakpoint>
+      <Breakpoint small down>
+        <Styled.ContainerProduto>
+          {product.map((prod) => {
+            return (
+              <Styled.ProdutoSmall key={prod.product.sku}>
+                <img src={prod.product.imageObjects[0].thumbnail} />
+                <span>{prod.product.name}</span>
+
+                <h3>R$ {prod.product.priceSpecification.originalPrice}</h3>
+              </Styled.ProdutoSmall>
+            )
+          })}
+        </Styled.ContainerProduto>
+      </Breakpoint>
+      <Breakpoint medium only>
+        <Styled.ContainerProduto>
+          {product.map((prod) => {
+            return (
+              <Styled.ProdutoSmall key={prod.product.sku}>
+                <img src={prod.product.imageObjects[0].thumbnail} />
+                <span>{prod.product.name}</span>
+
+                <h3>R$ {prod.product.priceSpecification.originalPrice}</h3>
+              </Styled.ProdutoSmall>
+            )
+          })}
+        </Styled.ContainerProduto>
+      </Breakpoint>
+    </>
   )
 }
 
