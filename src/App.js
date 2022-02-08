@@ -1,16 +1,16 @@
 import React from 'react'
-import './App.css'
+import * as Styled from './styles'
 import Header from './components/Header'
 import { BrowserRouter } from 'react-router-dom'
 import Rotas from './services/routes'
 
 const App = () => (
-  <div className="App">
+  <Styled.Container>
     <Header />
     <BrowserRouter>
       <Rotas />
     </BrowserRouter>
-  </div>
+  </Styled.Container>
 )
 
 export default App
