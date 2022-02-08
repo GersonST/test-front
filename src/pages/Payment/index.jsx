@@ -1,10 +1,11 @@
 import React from 'react'
+import * as Styled from './styles'
 
 function Payment() {
   return (
-    <div>
+    <Styled.Container>
       <h1>CARTÃO DE CRÉDITO</h1>
-      <form>
+      <Styled.Form>
         <label htmlFor="">Número do cartão:</label>
         <input type="text" />
         <label htmlFor="">Número do Titular:</label>
@@ -15,17 +16,17 @@ function Payment() {
           <label htmlFor="">CVV:</label>
           <input type="number" />
         </div>
-      </form>
-      <div>
+      </Styled.Form>
+      <Styled.ContainerTotal>
         <h2>PRODUTOS</h2>
         <h2>FRETE</h2>
         <h2>DESCONTO</h2>
         <h2>TOTAL</h2>
-      </div>
-      <button>
+      </Styled.ContainerTotal>
+      <Styled.Button>
         <a href="/confirmation">FINALIZAR O PEDIDO</a>
-      </button>
-    </div>
+      </Styled.Button>
+    </Styled.Container>
   )
 }
 
