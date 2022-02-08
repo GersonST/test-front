@@ -1,10 +1,11 @@
 import React from 'react'
+import * as Styled from './styles'
 
 function Confirmation() {
   return (
-    <div>
+    <Styled.Container>
       <h1>COMPRA EFETUADA COM SUCESSO</h1>
-      <div>
+      <Styled.ContainerProduto>
         <h2>PAGAMENTO</h2>
         <div>
           <h3>13109319239123</h3>
@@ -25,8 +26,8 @@ function Confirmation() {
           <h1>DESCONTO</h1>
           <h1>TOTAL</h1>
         </div>
-      </div>
-    </div>
+      </Styled.ContainerProduto>
+    </Styled.Container>
   )
 }
 
