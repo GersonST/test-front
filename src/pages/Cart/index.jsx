@@ -1,26 +1,27 @@
 import React from 'react'
+import * as Styled from './styled'
 
 function Cart() {
   return (
-    <div>
-      <h1>Produtos</h1>
-      <div>
+    <Styled.Container>
+      <Styled.Produtos>Produtos</Styled.Produtos>
+      <Styled.ContainerProduto>
         <ul>
           <li>Produto 1</li>
           <li>Produto 2</li>
           <li>Produto 3</li>
         </ul>
-      </div>
-      <div>
+      </Styled.ContainerProduto>
+      <Styled.ContainerTotal>
         <h2>Produtos</h2>
         <h2>Frete</h2>
         <h2>Desconto</h2>
         <h2>Total</h2>
-      </div>
-      <button>
+      </Styled.ContainerTotal>
+      <Styled.Button>
         <a href="/payment">Seguir para o Pagamento</a>
-      </button>
-    </div>
+      </Styled.Button>
+    </Styled.Container>
   )
 }
 

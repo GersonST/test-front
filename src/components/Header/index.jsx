@@ -1,12 +1,13 @@
 import React from 'react'
+import * as Styled from './styles'
 
 function Header() {
   return (
-    <div>
-      <a href="/">SACOLA </a>
-      <a href="/payment"> PAGAMENTO </a>
-      <a href="/confirmation"> CONFIRMAÇÃO</a>
-    </div>
+    <Styled.Header>
+      <Styled.ItensA href="/">SACOLA </Styled.ItensA>
+      <Styled.ItensA href="/payment"> PAGAMENTO </Styled.ItensA>
+      <Styled.ItensA href="/confirmation"> CONFIRMAÇÃO</Styled.ItensA>
+    </Styled.Header>
   )
 }
 
