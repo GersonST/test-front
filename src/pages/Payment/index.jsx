@@ -1,5 +1,8 @@
 import React from 'react'
+import Button from '../../components/Button'
 import * as Styled from './styles'
+
+import Total from '../../components/Total/index'
 
 function Payment() {
   return (
@@ -17,15 +20,8 @@ function Payment() {
           <input type="number" />
         </div>
       </Styled.Form>
-      <Styled.ContainerTotal>
-        <h2>PRODUTOS</h2>
-        <h2>FRETE</h2>
-        <h2>DESCONTO</h2>
-        <h2>TOTAL</h2>
-      </Styled.ContainerTotal>
-      <Styled.Button>
-        <a href="/confirmation">FINALIZAR O PEDIDO</a>
-      </Styled.Button>
+      <Total />
+      <Button text="FINALIZAR PEDIDO" url="confirmation" />
     </Styled.Container>
   )
 }

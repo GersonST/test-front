@@ -3,6 +3,7 @@ import * as Styled from './styled'
 
 import Products from '../../components/Products/index'
 import Total from '../../components/Total/index'
+import Button from '../../components/Button'
 
 function Cart() {
   return (
@@ -10,9 +11,7 @@ function Cart() {
       <Styled.Produtos>Produtos</Styled.Produtos>
       <Products />
       <Total />
-      <Styled.Button>
-        <a href="/payment">Seguir para o Pagamento</a>
-      </Styled.Button>
+      <Button text="IR PARA O PAGAMENTO" url="payment" />
     </Styled.Container>
   )
 }
